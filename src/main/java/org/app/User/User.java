@@ -1,19 +1,10 @@
 package org.app.User;
 
+import lombok.*;
+
+@Value // All fields are private and final. Getters (but not setters) are generated (https://projectlombok.org/features/Value.html)
 public class User {
-
     String username;
-    String hashedpassword;
-
-    public User(String username, String hashedpassword) {
-        this.username = username;
-        this.hashedpassword = hashedpassword;
-    }
-    public String getUsername() {
-        return username;
-    }
-    public String getHashedpassword() {
-        return hashedpassword;
-    }
-
+    String salt;
+    String hashedPassword;
 }
