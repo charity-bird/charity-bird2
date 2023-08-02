@@ -47,4 +47,4 @@ docker logs charitybird2 -f
 docker exec -it charitybird2 bash
 ```
 
-8. If it's running, you can now access it at http://localhost:8080
+8. If it's running, you can now access it at http://localhost:4567/index/
