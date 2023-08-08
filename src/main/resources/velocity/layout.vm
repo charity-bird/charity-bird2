@@ -39,9 +39,6 @@
         $bodyContent
     </div>
 </main>
-<footer>
-    $msg.get("COMMON_FOOTER_TEXT")
-</footer>
 </body>
 </html>
 #end

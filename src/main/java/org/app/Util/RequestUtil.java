@@ -54,5 +54,24 @@ public class RequestUtil {
         return accept != null && accept.contains("application/json");
     }
 
+    public static String getQueryFirstName(Request request) {
+        return request.queryParams("firstname");
+    }
+    public static String getQueryLastName(Request request) {
+        return request.queryParams("lastname");
+    }
+    public static String getQueryEmail(Request request) {
+        return request.queryParams("email");
+    }
+    public static String getQueryPhoneNumber(Request request) { return request.queryParams("phonenumber"); }
+    public static String getQueryPostalCode(Request request) {
+        return request.queryParams("postalcode");
+    }
+
+    public static int getQueryAmount(Request request) {
+        // Security Concern: This is not a safe way to parse an integer. See https://www.owasp.org/index.php/SQL_Injection
+        return Integer.parseInt(request.queryParams("amount"));
+    }
+
 }
 

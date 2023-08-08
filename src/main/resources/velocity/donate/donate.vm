@@ -1,0 +1,56 @@
+#parse("/velocity/layout.vm")
+#@mainLayout()
+  <body>
+    <div class="section">
+      <navbar class="navbar">
+        <div class="navbar-item">Home</div>
+        <div class="navbar-item">Donate</div>
+        <div class="navbar-item">Help</div>
+        <div class="navbar-item-flex-1"></div>
+        <div class="navbar-item">About</div>
+      </navbar>
+    </div>
+
+    <div class="section">
+      <div class="title"><h1>Charity Bird<h1></div>
+    </div>
+
+    <div class="section form-section">
+      <form id="donateForm" method="post">
+        <label for="firstname">First name:</label><br>
+        <input type="text" name="firstname"><br>
+        <label for="lastname">Last name:</label><br>
+        <input type="text" name="lastname"><br>
+        <label for="email">Email Address:</label><br>
+        <input type="email" name="email"><br>
+        <label for="phonenumber">Phone Number:</label><br>
+        <input type="text" name="phonenumber"><br>
+        <label for="postalcode">Postal Code:</label><br>
+        <input type="text" name="postalcode"><br>
+
+        <input type="radio" name="amount" value="50">
+        <label for="$50">$50</label><br>
+        <input type="radio" name="amount" value="100">
+        <label for="$100">$100</label><br>
+        <input type="radio" name="amount" value="200">
+        <label for="$200">$200</label><br>
+        <input type="radio" name="amount" value="500">
+        <label for="$500">$500</label><br>
+        <input type="submit" value="Donate">
+      </form>
+    </div>
+
+    <div class="section"></div>
+
+    <div class="section">
+      <footer class="footer">
+        <div class="footer-item">Newsletter</div>
+        <div class="footer-item">Fundraise</div>
+        <div class="footer-item">Careers</div>
+        <div class="footer-item-flex-1"></div>
+        <div class="footer-item">Legal</div>
+      </footer>
+    </div>
+
+  </body>
+#end

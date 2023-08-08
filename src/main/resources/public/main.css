@@ -110,15 +110,12 @@ main {
 }
 
 footer {
-    position: absolute;
     left: 0;
     bottom: 0;
     height: 40px;
     line-height: 40px;
     width: 100%;
     text-align: center;
-    background: #fff;
-    border-top: 1px solid #f9a11b;
     font-size: 14px;
 }
 
@@ -285,4 +282,51 @@ a .bookCover img {
 
 .bad.notification {
     background: #bb0000;
+}
+
+/* Donate Page */
+body,html {
+  padding: 0;
+  margin: 0;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  display: flex;
+  background: #FFF
+}
+
+.navbar-item {
+  padding:10px 10px;
+}
+
+.navbar-item-flex-1 {
+  flex: 1;
+}
+
+.section {
+  padding: 10px;
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+.footer {
+  display: flex;
+}
+
+.footer-item {
+  padding: 10px 10px;
+}
+
+.footer-item-flex-1 {
+  flex: 1;
+}
+
+.form-section {
+  display: flex;
+  justify-content: center;
 }

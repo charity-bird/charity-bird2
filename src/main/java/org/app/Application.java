@@ -1,6 +1,7 @@
 package org.app;
 
 import org.app.Book.*;
+import org.app.Donate.*;
 import org.app.Index.*;
 import org.app.Login.*;
 import org.app.User.*;
@@ -35,12 +36,15 @@ public class Application {
         get(Path.Web.BOOKS,          BookController.fetchAllBooks);
         get(Path.Web.ONE_BOOK,       BookController.fetchOneBook);
         get(Path.Web.LOGIN,          LoginController.serveLoginPage);
+        get(Path.Web.DONATE,         DonateController.serveDonatePage);
+        get(Path.Web.RECEIPT,        DonateController.serveReceiptPage);
+        post(Path.Web.DONATE,        DonateController.handleDonatePost);
         post(Path.Web.LOGIN,         LoginController.handleLoginPost);
         post(Path.Web.LOGOUT,        LoginController.handleLogoutPost);
         get("*",                ViewUtil.notFound);
 
         //Set up after-filters (called after each get/post)
-        after("*",                   Filters.addGzipHeader);
+        after("*",              Filters.addGzipHeader);
 
     }
 

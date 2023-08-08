@@ -1,0 +1,54 @@
+#parse("/velocity/layout.vm")
+#@mainLayout()
+<body>
+  <div class="section">
+    <navbar class="navbar">
+      <div class="navbar-item">Home</div>
+      <div class="navbar-item">Donate</div>
+      <div class="navbar-item">Help</div>
+      <div class="navbar-item-flex-1"></div>
+      <div class="navbar-item">About</div>
+    </navbar>
+  </div>
+
+  <div class="section">
+    <div class="title"><h1>Charity Bird<h1></div>
+  </div>
+
+  <div class="section form-section">
+    <div class="receipt-container">
+
+      #if($firstName and $lastName and $emailAddress and $phoneNumber and $postalCode and $amount)
+      <div class="receipt-container-item">
+        First Name: $firstName <br>
+        Last Name:  $lastName <br>
+        Email Address: $emailAddress <br>
+        Phone Number: $phoneNumber <br>
+        Postal Code: $postalCode <br>
+        Amount: $$amount <br>
+      </div>
+
+      <div class="receipt-container-item">
+        <p> Donation Recieved. Please check your email address for the receipt<p>
+      </div>
+      #else
+      <div class="receipt-container-item">
+        <p>Donation Failed. Please try again<p>
+      </div>
+      #end
+    </div>
+  </div>
+
+  <div class="section"></div>
+
+  <div class="section">
+    <footer class="footer">
+      <div class="footer-item">Newsletter</div>
+      <div class="footer-item">Fundraise</div>
+      <div class="footer-item">Careers</div>
+      <div class="footer-item-flex-1"></div>
+      <div class="footer-item">Legal</div>
+    </footer>
+  </div>
+</body>
+#end
